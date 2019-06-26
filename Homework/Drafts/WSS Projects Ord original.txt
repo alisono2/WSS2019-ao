@@ -1,0 +1,40 @@
+Every student at the school will be assigned a unique project to work on and complete by the end of the 3 weeks. To place your interest better among school activities we need you to send us at least 2 potential project descriptions, feel free to send more. A project description consists of a title and an abstract (a paragraph of text) and should be in plain text format. In the abstract please describe your project goal, how you plan to use the Wolfram Language to achieve this goal, and why you think this project is innovative
+
+*Comments:
+It may be that mtca can already do what I am looking for but that I just don't know about it. I aim to learn.
+The projects below may not be sufficiently focussed for the purpose, but I do think we need some common background in order to advance.
+This is just the beginning!
+
+*Nonlinear analysis of a fold
+Are folded rocks a snapshot of a nonlinear dynamic system? The aim is to move a cursor through (x, y, z) coordinates for the surface of a deformed, folded rock and to watch data driven analyses change in different windows including: spatial attractors, wavelet transforms, singularity spectra, Hurst exponents, recurrence plots (including the ability for cross- and joint- recurrence plots and their quantitative analysis), Fourier transforms, recurrence histograms, networks, and sparsely determined nonlinear determinations of the differential equations describing the data. I have already used the Wolfram Language for some of these analyses, but I wish to use the Wolfram Language for all of these analyses, and interactively with the data and themselves so there may be feedback between the different forms of analysis providing an optimal nonlinear description of the data. Putting all this together I think is new, but the most important aspect is providing an easy to use tool from the nonlinear dynamical toolbox for geologists to explore their data in a completely new way. The use of the tool requires a pedagogic approach to its development.
+Some prioritisation will be required! Also, I have much data from other sources, 1D, 2D and 3D, hyperspectral analyses, mechanical computational simulations created in external software, requiring this approach.
+
+*The Precious Earth
+I wish to learn how to provide the chapters of The Precious Earth (already provided to Kyle Keane) to various audiences (including field geologists to executives), focussing in particular on the chapter regarding techniques in dealing with irregular or chaotic systems. It may not be innovative for Wolfram afficionado but it is for geologists. I see the Wolfram 12 desktop may have more solutions than I have yet discovered. I find Kyle Keane already has Youtube presentations using a see-through screen. How best do I present/market the ideas, the concepts, the science to students, CEO's, people with no geological background?
+
+*Interaction with other software
+I don't know if this counts as a project, but I do want to learn about the following:
+1. Running other codes out of mtca e.g. FLAC, PFC, Last Wave, other (en route to the software being re-created within teh Wolfram Language)
+2. Capacity for mtca to do what other codes do
+	Excel
+	Powerpoint
+For example, consider my 'workflow' for the Last Wave software (Bacry 1993):
+Last Wave
+Screenshot
+PowerPoint
+Cleanup & Label
+Word
+Captions etc.
+So use of mtca for final ms production
+
+*Ease of interaction with mtca - physics - the data
+Ask Siri!
+
+*Coding of SINDy
+Sparse Identification of Nonlinear Dynamics Brunton, Proctor and Kutz. PNAS 2016, 113, 3932-3937.
+'despite the rapid development of tools to understand static data based on statistical relationships, there has been slow progress in distilling physical models of dynamic processes from big data. This has limited the ability of data science models to extrapolate the dynamics beyond the attractor where they were sampled and constructed.'
+
+There is already open source code available in Octave. However, it would be good to have this integrated with all the other nonlinear tools in one package. Also, I need help in the final step-s regarding interrogating phase space. It would be good if the problem addressed here could be of interest to attendees at the Summer School - it's really important! I want to use it in mineral exploration.
+
+*Computational Essays
+I have many examples already written (Hobbs & Ord, 2015; The Precious Earth). I just need to focus on one, for example Ord et al. 2018 PhilTrans folding ms as a basis. The approach is certainly innovative for me! It could be a good approach to addressing the issues I raise in the first project description above.

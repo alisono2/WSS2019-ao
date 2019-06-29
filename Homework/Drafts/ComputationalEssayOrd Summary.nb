@@ -1,0 +1,180 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      8067,        172]
+NotebookOptionsPosition[      6473,        128]
+NotebookOutlinePosition[      7440,        161]
+CellTagsIndexPosition[      7373,        156]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Nonlinear analysis of a fold", "Title",
+ CellChangeTimes->{{3.770055572438499*^9, 3.7700555729498453`*^9}, {
+  3.770055604008165*^9, 3.7700556066618843`*^9}, {3.770373672636671*^9, 
+  3.7703737875292807`*^9}, {3.7704922777103934`*^9, 3.7704922850664077`*^9}, {
+  3.7706677525373926`*^9, 3.770667753477394*^9}},
+ CellTags->"Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
+
+Cell["Alison Ord", "Text",
+ CellChangeTimes->{{3.549624168509506*^9, 3.549624171985794*^9}, {
+  3.549624508772977*^9, 3.549624510775043*^9}, {3.5498187159613867`*^9, 
+  3.5498187170087957`*^9}, {3.549819049020514*^9, 3.5498190533440437`*^9}, {
+  3.77005561844785*^9, 3.7700556489651537`*^9}, {3.770492289278415*^9, 
+  3.770492290886218*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
+fa93ec9acae9"],
+
+Cell[CellGroupData[{
+
+Cell["Background", "Section",
+ CellChangeTimes->{{3.7704925304948454`*^9, 3.770492537111257*^9}, {
+   3.770492945924589*^9, 3.770492947189191*^9}, {3.77049318185461*^9, 
+   3.770493197211037*^9}, {3.770493257472745*^9, 3.7704933133150454`*^9}, {
+   3.770493390096182*^9, 3.7704933942935886`*^9}, {3.7704937627842455`*^9, 
+   3.7704937815454793`*^9}, 3.7704941919528103`*^9, {3.7704942282272754`*^9, 
+   3.770494301168805*^9}, {3.770667006244115*^9, 
+   3.770667031719598*^9}},ExpressionUUID->"f50195a1-c2fb-4da6-a9fc-\
+bf40f778af7b"],
+
+Cell[TextData[StyleBox["Are folded rocks a snapshot of a nonlinear dynamic \
+system?\n  \nThe Wolfram Language has already been used for some of these \
+nonlinear analyses, but the intent is to use the Wolfram Language for all of \
+these analyses, and interactively with the data and themselves so there may \
+be feedback between the different forms of analysis providing an optimal \
+nonlinear description of the data.\n  \nThe most important aspect is \
+providing an easy to use tool from the nonlinear dynamical toolbox for \
+geologists to explore their data in a completely new way.\n  \n The use of \
+the tool requires a pedagogic approach to its development. There is much data \
+from other sources, 1 D, 2 D and 3 D, hyperspectral analyses, mechanical \
+computational simulations created in external software, requiring this \
+approach.", "Text"]], "Text",
+ CellChangeTimes->{{3.7704925304948454`*^9, 3.770492537111257*^9}, {
+   3.770492945924589*^9, 3.770492947189191*^9}, {3.77049318185461*^9, 
+   3.770493197211037*^9}, {3.770493257472745*^9, 3.7704933133150454`*^9}, {
+   3.770493390096182*^9, 3.7704933942935886`*^9}, {3.7704937627842455`*^9, 
+   3.7704937815454793`*^9}, 3.7704941919528103`*^9, {3.7704942282272754`*^9, 
+   3.770494301168805*^9}, 3.770667006244115*^9, {3.7706670372501287`*^9, 
+   3.7706670499882193`*^9}, {3.7707355758479514`*^9, 3.770735580187259*^9}, {
+   3.7707584913526893`*^9, 3.7707584948792953`*^9}, {3.770758698880859*^9, 
+   3.7707587626417875`*^9}},ExpressionUUID->"5e59fedf-0823-448f-a17b-\
+5203a4a7f616"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "The Problem",
+ StyleBox["\n  ", "Text"]
+}], "Section",
+ CellChangeTimes->{{3.7704925304948454`*^9, 3.770492537111257*^9}, {
+   3.770492945924589*^9, 3.770492947189191*^9}, {3.77049318185461*^9, 
+   3.770493197211037*^9}, {3.770493257472745*^9, 3.7704933133150454`*^9}, {
+   3.770493390096182*^9, 3.7704933942935886`*^9}, {3.7704937627842455`*^9, 
+   3.7704937815454793`*^9}, 3.7704941919528103`*^9, {3.7704942282272754`*^9, 
+   3.770494301168805*^9}, 3.770667006244115*^9, 3.7706670372501287`*^9, 
+   3.7706670978057737`*^9},ExpressionUUID->"a5b68164-fdf1-4902-b195-\
+d06f677d54e5"],
+
+Cell[TextData[StyleBox["When layered rocks are shortened during tectonic \
+events, the most obvious structures formed are folds. Folding of layered \
+rocks causes a change in geological structure that can lead to a fundamental \
+modification of the mechanical and hydraulic properties of the rock mass \
+across several orders of magnitude in length - typically from the millimetre \
+to the kilometre-scale. \n\n  The understanding of how, why and on which \
+scale folding occurs therefore has fundamental implications for problems in \
+geology and engineering, including prediction of the form and location of \
+hydrocarbon accumulations, salt domes, groundwater flow, mineralization, and \
+rock slope stability.", "Text"]], "Text",
+ CellChangeTimes->{{3.7704925304948454`*^9, 3.770492537111257*^9}, {
+   3.770492945924589*^9, 3.770492947189191*^9}, {3.77049318185461*^9, 
+   3.770493197211037*^9}, {3.770493257472745*^9, 3.7704933133150454`*^9}, {
+   3.770493390096182*^9, 3.7704933942935886`*^9}, {3.7704937627842455`*^9, 
+   3.7704937815454793`*^9}, 3.7704941919528103`*^9, {3.7704942282272754`*^9, 
+   3.770494301168805*^9}, 3.770667006244115*^9, 3.7706670372501287`*^9, {
+   3.770667123618595*^9, 3.770667124484017*^9}, {3.7707356058516045`*^9, 
+   3.77073562571024*^9}},ExpressionUUID->"e36eb822-754c-4e32-9326-\
+96b1cc85388b"],
+
+Cell["\<\
+ We have prepared three dimensional models of natural fold systems using \
+photogrammetry and we explore the multifractal geometry using the Wavelet \
+Transform Modulus Maxima (WTMM) method and recurrence quantification in order \
+to delineate the dynamics of naturally folded systems.The property of \
+interest with the H\[EAcute]non low two-dimensional mapping, as well as its \
+mechanical underpinning, is its possession of a strange attractor, of \
+interest to geology and naturally occurring fold systems since it was \
+suggested they may display spatial chaos in their geometry. The Lorenz model \
+and its strange attractor, the basis for weather exploration, is associated \
+with three- or higher dimensional dynamical systems .  \
+\>", "Text",
+ CellChangeTimes->{
+  3.770493803223918*^9, {3.770493903672697*^9, 3.77049392794074*^9}, 
+   3.770494041072342*^9, {3.7707356309206495`*^9, 
+   3.770735674707027*^9}},ExpressionUUID->"662beb13-4937-41bd-a6c2-\
+efdfde966363"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{874, 518},
+WindowMargins->{{Automatic, 162}, {Automatic, 22}},
+DockedCells->{
+  Cell[
+   TextData[{
+     StyleBox["  WOLFRAM ", 
+      RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontWeight -> 
+      Bold, FontSize -> 40], 
+     StyleBox["SUMMER SCHOOL", 
+      GrayLevel[1], FontFamily -> "Source Sans Pro", FontSize -> 40], 
+     StyleBox[" 2019", 
+      RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontSize -> 
+      40]}], CellFrameMargins -> 10, Background -> 
+   RGBColor[0.12, 0.14, 0.15]]},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Title"->{
+  Cell[583, 22, 391, 5, 96, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
+   CellTags->"Title"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Title", 7234, 150}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 391, 5, 96, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
+ CellTags->"Title"],
+Cell[977, 29, 398, 6, 34, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
+Cell[CellGroupData[{
+Cell[1400, 39, 533, 8, 67, "Section",ExpressionUUID->"f50195a1-c2fb-4da6-a9fc-bf40f778af7b"],
+Cell[1936, 49, 1547, 21, 254, "Text",ExpressionUUID->"5e59fedf-0823-448f-a17b-5203a4a7f616"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3520, 75, 600, 11, 89, "Section",ExpressionUUID->"a5b68164-fdf1-4902-b195-d06f677d54e5"],
+Cell[4123, 88, 1333, 18, 188, "Text",ExpressionUUID->"e36eb822-754c-4e32-9326-96b1cc85388b"],
+Cell[5459, 108, 986, 16, 166, "Text",ExpressionUUID->"662beb13-4937-41bd-a6c2-efdfde966363"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

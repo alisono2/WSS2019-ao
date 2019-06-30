@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14936,        383]
-NotebookOptionsPosition[     13303,        342]
-NotebookOutlinePosition[     14110,        369]
-CellTagsIndexPosition[     14067,        366]
+NotebookDataLength[     14990,        379]
+NotebookOptionsPosition[     13351,        338]
+NotebookOutlinePosition[     14165,        365]
+CellTagsIndexPosition[     14122,        362]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,12 +26,13 @@ Cell["RQA Exploration", "Title",
   3.770898034007226*^9}},ExpressionUUID->"49ab34ee-bfd5-49f5-beef-\
 400d3cc456dd"],
 
-Cell["Allison Ord", "Text",
+Cell["Alison Ord", "Text",
  CellChangeTimes->{{3.549624168509506*^9, 3.549624171985794*^9}, {
-  3.549624508772977*^9, 3.549624510775043*^9}, {3.5498187159613867`*^9, 
-  3.5498187170087957`*^9}, {3.549819049020514*^9, 3.5498190533440437`*^9}, {
-  3.77005561844785*^9, 3.7700556489651537`*^9}, {3.770898036349915*^9, 
-  3.770898039216989*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
+   3.549624508772977*^9, 3.549624510775043*^9}, {3.5498187159613867`*^9, 
+   3.5498187170087957`*^9}, {3.549819049020514*^9, 3.5498190533440437`*^9}, {
+   3.77005561844785*^9, 3.7700556489651537`*^9}, {3.770898036349915*^9, 
+   3.770898039216989*^9}, 
+   3.7708986102522106`*^9},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
 fa93ec9acae9"],
 
 Cell["Flip Phillips", "Text",
@@ -65,10 +66,10 @@ Cell[BoxData[
   3.770898221208838*^9, 3.770898284388609*^9}},
  CellLabel->"In[1]:=",ExpressionUUID->"c52ed9b0-b9c8-45f6-9aaf-4d00ab93b632"],
 
-Cell[BoxData["\<\"/Users/flip/GitHub/WSS2019-ao/Final \
-Project/Drafts/../../../RQA/RQA\"\>"], "Output",
- CellChangeTimes->{3.7708982893757353`*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"4a9efe1c-c330-4bde-acf9-640860511d95"]
+Cell[BoxData["\<\"C:\\\\Users\\\\Alison\\\\Documents\\\\GitHub\\\\WSS2019-ao\\\
+\\Final Project\\\\Drafts\\\\..\\\\..\\\\..\\\\RQA\\\\RQA\"\>"], "Output",
+ CellChangeTimes->{3.7708982893757353`*^9, 3.7708986732384243`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"21ea7197-6bbe-4573-8bee-cc6470cee2c5"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -78,14 +79,14 @@ Cell[BoxData[
     RowBox[{"gitHubDir", ",", "\"\<RQA.wl\>\""}], "}"}], "]"}], 
   "]"}]], "Input",
  CellChangeTimes->{{3.7708982920785427`*^9, 3.770898321502737*^9}},
- CellLabel->"In[3]:=",ExpressionUUID->"6ad2fb0f-e983-47d0-b0be-e2b0cdc3f9c9"],
+ CellLabel->"In[2]:=",ExpressionUUID->"6ad2fb0f-e983-47d0-b0be-e2b0cdc3f9c9"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"?", "RQA`*"}]], "Input",
  CellChangeTimes->{{3.770898324397849*^9, 3.770898328770615*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"8c1e9038-08b8-4b23-b513-a2b93e77fcf4"],
+ CellLabel->"In[3]:=",ExpressionUUID->"8c1e9038-08b8-4b23-b513-a2b93e77fcf4"],
 
 Cell[BoxData[
  StyleBox[
@@ -111,7 +112,7 @@ Cell[BoxData[
               
               DynamicBox[FEPrivate`FrontEndResource[
                "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{13., {3., 10.}}], " ", 
+               ImageSizeCache->{10., {2., 8.}}], " ", 
               StyleBox["RQA`", "InformationGridGroupHeader"]}],
              Appearance->None,
              BaseStyle->"InformationGridLink",
@@ -127,18 +128,48 @@ Cell[BoxData[
                  BaseStyle->"InformationGridLink",
                  
                  ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
                    "RQA", "RQA`"}, False},
                  ButtonNote->"RQA`",
                  Evaluator->Automatic], 
                 ButtonBox[
-                 StyleBox["RQAMakeTimeSeries", "InformationGridButton"],
+                 StyleBox["RQAEmbed", "InformationGridButton"],
                  Appearance->None,
                  BaseStyle->"InformationGridLink",
                  
                  ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQAMakeTimeSeries", "RQA`"}, False},
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQAEmbed", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQALaminarity", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQALaminarity", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQANeighbors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQANeighbors", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQATrappingTime", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQATrappingTime", "RQA`"}, False},
                  ButtonNote->"RQA`",
                  Evaluator->Automatic]},
                {
@@ -148,18 +179,48 @@ Cell[BoxData[
                  BaseStyle->"InformationGridLink",
                  
                  ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
                    "RQAChaos", "RQA`"}, False},
                  ButtonNote->"RQA`",
                  Evaluator->Automatic], 
                 ButtonBox[
-                 StyleBox["RQANearestNeighbors", "InformationGridButton"],
+                 StyleBox["RQAEntropy", "InformationGridButton"],
                  Appearance->None,
                  BaseStyle->"InformationGridLink",
                  
                  ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQANearestNeighbors", "RQA`"}, False},
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQAEntropy", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQAMakeTimeSeries", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQAMakeTimeSeries", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQARecurrence", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQARecurrence", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQATrend", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQATrend", "RQA`"}, False},
                  ButtonNote->"RQA`",
                  Evaluator->Automatic]},
                {
@@ -169,84 +230,10 @@ Cell[BoxData[
                  BaseStyle->"InformationGridLink",
                  
                  ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
                    "RQADeterminism", "RQA`"}, False},
                  ButtonNote->"RQA`",
                  Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["RQANeighborDistances", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQANeighborDistances", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["RQADistanceMap", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQADistanceMap", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["RQANeighbors", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQANeighbors", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["RQAEmbed", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQAEmbed", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["RQARecurrence", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQARecurrence", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["RQAEntropy", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQAEntropy", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["RQARecurrenceMap", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQARecurrenceMap", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic]},
-               {
                 ButtonBox[
                  
                  StyleBox["RQAEstimateDimensionality", 
@@ -255,8 +242,59 @@ Cell[BoxData[
                  BaseStyle->"InformationGridLink",
                  
                  ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
                    "RQAEstimateDimensionality", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQANearestNeighbors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQANearestNeighbors", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQARecurrenceMap", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQARecurrenceMap", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["RQADistanceMap", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQADistanceMap", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQAEstimateLag", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQAEstimateLag", "RQA`"}, False},
+                 ButtonNote->"RQA`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RQANeighborDistances", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
+                   "RQANeighborDistances", "RQA`"}, False},
                  ButtonNote->"RQA`",
                  Evaluator->Automatic], 
                 ButtonBox[
@@ -265,59 +303,17 @@ Cell[BoxData[
                  BaseStyle->"InformationGridLink",
                  
                  ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
+                  "Info-237e2632-0fad-42bb-8ddd-30c87495730e", {
                    "RQATimeSeriesEpochs", "RQA`"}, False},
                  ButtonNote->"RQA`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["RQAEstimateLag", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQAEstimateLag", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["RQATrappingTime", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQATrappingTime", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic]},
-               {
-                ButtonBox[
-                 StyleBox["RQALaminarity", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQALaminarity", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic], 
-                ButtonBox[
-                 StyleBox["RQATrend", "InformationGridButton"],
-                 Appearance->None,
-                 BaseStyle->"InformationGridLink",
-                 
-                 ButtonData:>{
-                  "Info-b4e5b18a-8f59-4d12-862f-1ef94858a027", {
-                   "RQATrend", "RQA`"}, False},
-                 ButtonNote->"RQA`",
-                 Evaluator->Automatic]}
+                 Evaluator->Automatic], ""}
               },
               DefaultBaseStyle->"Text",
               
               GridBoxAlignment->{
                "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
               GridBoxItemSize->{"Columns" -> {{
-                   Scaled[0.475]}}}],
+                   Scaled[0.19]}}}],
              ImageMargins->{{10, 0}, {0, 2}}]}
           },
           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
@@ -334,14 +330,14 @@ Cell[BoxData[
          Offset[0.8]}, 
         Offset[0.2]}}],
    BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
- CellChangeTimes->{3.770898329523258*^9},
- CellLabel->"Out[4]=",ExpressionUUID->"565d1bbb-7197-4566-aa71-485c69ec4155"]
+ CellChangeTimes->{3.770898329523258*^9, 3.770898697916868*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"a494b5d3-9958-4130-be75-cbcf9f08c558"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{720, 855},
-WindowMargins->{{360, Automatic}, {Automatic, 0}},
+WindowSize->{1280, 638},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 DockedCells->{
   Cell[
    TextData[{
@@ -354,7 +350,7 @@ DockedCells->{
       RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontSize -> 
       40]}], CellFrameMargins -> 10, Background -> 
    RGBColor[0.12, 0.14, 0.15]]},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -369,19 +365,19 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 257, 4, 123, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
-Cell[840, 28, 399, 6, 44, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
-Cell[1242, 36, 357, 6, 44, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"],
+Cell[580, 22, 257, 4, 96, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
+Cell[840, 28, 430, 7, 34, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
+Cell[1273, 37, 357, 6, 34, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"],
 Cell[CellGroupData[{
-Cell[1624, 46, 235, 4, 84, "Section",ExpressionUUID->"3ca94c4f-bf31-4197-9acd-da86ca8bdac2"],
+Cell[1655, 47, 235, 4, 67, "Section",ExpressionUUID->"3ca94c4f-bf31-4197-9acd-da86ca8bdac2"],
 Cell[CellGroupData[{
-Cell[1884, 54, 490, 11, 64, "Input",ExpressionUUID->"c52ed9b0-b9c8-45f6-9aaf-4d00ab93b632"],
-Cell[2377, 67, 226, 3, 69, "Output",ExpressionUUID->"4a9efe1c-c330-4bde-acf9-640860511d95"]
+Cell[1915, 55, 490, 11, 28, "Input",ExpressionUUID->"c52ed9b0-b9c8-45f6-9aaf-4d00ab93b632"],
+Cell[2408, 68, 300, 3, 32, "Output",ExpressionUUID->"21ea7197-6bbe-4573-8bee-cc6470cee2c5"]
 }, Open  ]],
-Cell[2618, 73, 314, 7, 37, "Input",ExpressionUUID->"6ad2fb0f-e983-47d0-b0be-e2b0cdc3f9c9"],
+Cell[2723, 74, 314, 7, 28, "Input",ExpressionUUID->"6ad2fb0f-e983-47d0-b0be-e2b0cdc3f9c9"],
 Cell[CellGroupData[{
-Cell[2957, 84, 192, 3, 37, "Input",ExpressionUUID->"8c1e9038-08b8-4b23-b513-a2b93e77fcf4"],
-Cell[3152, 89, 10111, 248, 373, "Output",ExpressionUUID->"565d1bbb-7197-4566-aa71-485c69ec4155"]
+Cell[3062, 85, 192, 3, 28, "Input",ExpressionUUID->"8c1e9038-08b8-4b23-b513-a2b93e77fcf4"],
+Cell[3257, 90, 10054, 243, 183, "Output",ExpressionUUID->"a494b5d3-9958-4130-be75-cbcf9f08c558"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

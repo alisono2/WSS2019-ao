@@ -11,10 +11,10 @@
 (* :Package Version: 1.1 *)
 (* :Mathematica Version: 10.0+ *)
 (* :Copyright: Copyright 1988-2019, Flip Phillips, All Rights Reserved.  *)
-(* :History: *)
+(* :History: Modified by Alison Ord *)
 (* :Keywords: packages, path, keywords *)
 (* :Limitations:  *)
-(* :Discussion:  *)
+(* :Discussion: Changes need to be incorporated into Flip's package *)
 
 
 (* ::Section:: *)
@@ -85,7 +85,13 @@ RQATrend::usage=""
 RQAEntropy::usage=""
 
 
+RQADmax::usage=""
+
+
 RQAChaos::usage=""
+
+
+RQAVmax::usage=""
 
 
 (* ::Text:: *)
@@ -98,7 +104,7 @@ RQAMakeTimeSeries::usage=""
 RQATimeSeriesEpochs::usage=""
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Begin the private context*)
 
 
@@ -110,7 +116,7 @@ Begin["`Private`"]
 
 
 Unprotect[{RQAEmbed,RQADistanceMap,RQARecurrenceMap,RQANeighbors,RQANearestNeighbors,RQANeighborDistances,RQAEstimateDimensionality,RQAEstimateLag,
-	RQARecurrence,RQADeterminism,RQALaminarity,RQATrappingTime,RQATrend,RQAEntropy,RQAChaos,
+	RQARecurrence,RQADeterminism,RQALaminarity,RQATrappingTime,RQATrend,RQAEntropy,RQADmax,RQAChaos,RQAVmax,
 	RQAMakeTimeSeries,RQATimeSeriesEpochs}]
 
 
@@ -412,6 +418,15 @@ RQAEntropy[rm_,thresh_:2]:=Module[{ut,w,diags,segLens,lens,nRP},
 	]/;SquareMatrixQ[rm]
 
 
+RQADmax[rm_,thresh_:2]:=Module[{ut,w,diags,segLens,lens,nRP},ut=UpperTriangularize[rm,1];
+	w=First[Dimensions[rm]];
+	diags=Diagonal[ut,#]&/@Range[1,w-1];
+	segLens=segmentLengths[diags,thresh];
+	lens=Total/@segLens;
+	Max[segLens]
+	]/;SquareMatrixQ[rm]
+
+
 RQAChaos[rm_,thresh_:2]:=Module[{ut,w,diags,segLens,lens,nRP},
 	ut=UpperTriangularize[rm,1];
 	w=First[Dimensions[rm]];
@@ -419,6 +434,14 @@ RQAChaos[rm_,thresh_:2]:=Module[{ut,w,diags,segLens,lens,nRP},
 	diags=Diagonal[ut,#]&/@Range[1,w-1];
 	segLens=Select[Flatten[segmentLengths[diags,thresh]],#>0&];
 	1/Max[segLens]
+]/;SquareMatrixQ[rm]
+
+
+RQAVmax[rm_,thresh_:2]:=Module[{ut,verts,segLens,lens,nRP},ut=UpperTriangularize[rm,1];
+	verts=Transpose[ut];
+	segLens=segmentLengths[verts,thresh];
+	lens=Total/@segLens;
+	Max[segLens]
 ]/;SquareMatrixQ[rm]
 
 
@@ -442,7 +465,7 @@ End[]
 
 
 Protect[{RQAEmbed,RQADistanceMap,RQARecurrenceMap,RQANeighbors,RQANearestNeighbors,RQANeighborDistances,RQAEstimateDimensionality,RQAEstimateLag,
-	RQARecurrence,RQADeterminism,RQALaminarity,RQATrappingTime,RQATrend,RQAEntropy,RQAChaos,
+	RQARecurrence,RQADeterminism,RQALaminarity,RQATrappingTime,RQATrend,RQAEntropy,RQADmax,RQAChaos,RQAVmax,
 	RQAMakeTimeSeries,RQATimeSeriesEpochs}]
 
 
